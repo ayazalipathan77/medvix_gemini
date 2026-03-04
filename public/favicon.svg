@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="globeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0072bc" />
+      <stop offset="100%" stop-color="#003b73" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#009245" />
+      <stop offset="100%" stop-color="#39b54a" />
+    </linearGradient>
+    <linearGradient id="crossGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f2f2f2" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <circle cx="90" cy="90" r="90" fill="url(#globeGrad)" />
+    
+    <path d="M 15 60 Q 90 80 165 60" fill="none" stroke="#4da6ff" stroke-width="2" opacity="0.6" />
+    <path d="M 10 90 Q 90 110 170 90" fill="none" stroke="#4da6ff" stroke-width="2" opacity="0.6" />
+    <path d="M 15 120 Q 90 140 165 120" fill="none" stroke="#4da6ff" stroke-width="2" opacity="0.6" />
+    
+    <path d="M 60 15 Q 80 90 60 165" fill="none" stroke="#4da6ff" stroke-width="2" opacity="0.6" />
+    <path d="M 90 10 L 90 170" fill="none" stroke="#4da6ff" stroke-width="2" opacity="0.6" />
+    <path d="M 120 15 Q 100 90 120 165" fill="none" stroke="#4da6ff" stroke-width="2" opacity="0.6" />
+
+    <path d="M 120 50 h 30 v 30 h 30 v 30 h -30 v 30 h -30 v -30 h -30 v -30 h 30 z" fill="url(#crossGrad)" />
+
+    <path d="M 5 120 C 30 180, 110 210, 165 140 C 130 180, 50 170, 5 120 Z" fill="url(#leafGrad)" />
+  </g>
+</svg>
