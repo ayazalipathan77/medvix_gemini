@@ -1,73 +1,58 @@
 import { motion } from "motion/react";
-import { Target, ShieldCheck, Users } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 export default function About() {
-  const cards = [
-    {
-      icon: <Target className="w-8 h-8 text-[#0056b3]" />,
-      title: "Performance-Driven",
-      description:
-        "Dedicated to helping healthcare providers increase collections, reduce denials, and streamline operations.",
-    },
-    {
-      icon: <ShieldCheck className="w-8 h-8 text-[#00a651]" />,
-      title: "Certified Specialists",
-      description:
-        "Our team understands payer guidelines, CPT/ICD-10 coding standards, and HIPAA compliance regulations.",
-    },
-    {
-      icon: <Users className="w-8 h-8 text-[#0056b3]" />,
-      title: "Extension of Practice",
-      description:
-        "We operate as an extension of your practice — not just a third-party vendor.",
-    },
-  ];
-
   return (
-    <section id="about" className="py-24 bg-white relative">
+    <section id="about" className="py-32 bg-white">
       <div className="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-[#0056b3] font-semibold tracking-wider uppercase text-sm mb-3">
-              About Medvix Solutions
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Maximize Your Revenue While You Focus on Patient Care.
-            </h3>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              MEDVIX SOLUTIONS is a performance-driven medical billing company.
-              We don't just process claims; we build predictable revenue systems
-              that empower healthcare providers across the United States.
-            </p>
-          </motion.div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            >
-              <div className="w-16 h-16 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6">
-                {card.icon}
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">
-                {card.title}
-              </h4>
-              <p className="text-gray-600 leading-relaxed">
-                {card.description}
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="relative">
+            <div className="aspect-[4/5] bg-gray-100 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000" 
+                alt="Medvix Team" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
+            <div className="absolute -bottom-8 -right-8 bg-white p-8 border border-gray-100 max-w-xs hidden md:block">
+              <p className="font-heading text-2xl text-gray-900 mb-2">15+ Years</p>
+              <p className="font-sans text-xs text-gray-500 uppercase tracking-widest">
+                Of Excellence in RCM
               </p>
-            </motion.div>
-          ))}
+            </div>
+          </div>
+
+          <div>
+            <span className="block font-sans text-xs font-medium tracking-[0.2em] text-gray-400 mb-6 uppercase">
+              Who We Are
+            </span>
+            <h2 className="font-heading text-4xl md:text-5xl text-gray-900 leading-tight mb-8">
+              More than just a <br />
+              <span className="italic text-gray-500">billing company.</span>
+            </h2>
+            <p className="font-sans text-gray-500 text-lg leading-relaxed mb-8">
+              At Medvix Solutions, we believe that financial health is just as important as patient health. We are a team of dedicated RCM experts, certified coders, and data analysts working together to transform your practice's revenue cycle.
+            </p>
+            <p className="font-sans text-gray-500 text-sm leading-relaxed mb-12">
+              Our mission is simple: to provide transparent, efficient, and compliant billing solutions that allow healthcare providers to focus on what they do best—caring for patients.
+            </p>
+
+            <div className="space-y-4">
+              {[
+                "Certified Professional Coders (CPC)",
+                "HIPAA Compliant Processes",
+                "Data-Driven Financial Strategies",
+                "24/7 Client Support"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-4 group">
+                  <div className="w-8 h-px bg-gray-200 group-hover:bg-gray-900 transition-colors"></div>
+                  <span className="font-sans text-sm text-gray-600 group-hover:text-gray-900 transition-colors">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

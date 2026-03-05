@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-[#00a651]/20 selection:text-[#0056b3]">
+    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-gray-200 selection:text-gray-900">
       <Navbar />
       <main>
         <Hero />
@@ -22,20 +22,6 @@ export default function App() {
         <Services />
         <WhyChooseUs />
         <Results />
-        
-        {/* Promo Banner Section */}
-        <section className="py-12 bg-white">
-          <div className="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
-            <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
-              <img 
-                src="/assets/marketing/promo-banner.svg" 
-                alt="Maximize Your Practice Revenue" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
         <FAQ />
       </main>
       <Footer />
